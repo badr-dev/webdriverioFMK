@@ -4,4 +4,12 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
+      myjob:
+        steps:
+          - checkout
+          - run:
+            name: "Install env"
+            command: npm install
+          - run:
+            name: "Run test"
+            command: npm run local
