@@ -9,10 +9,9 @@ class GoogleHomePage {
     
     public static EnterKey: string = "\uE007";
 
-
     public async startPage(): Promise<void>{
         
-        browser.url(this._url);
+        (await browser.url(this._url));
         
         if ( (await $('body iframe').waitForExist({ timeout: 5000 })) ) {
 
