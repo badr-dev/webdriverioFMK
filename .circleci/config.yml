@@ -5,9 +5,5 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - checkout
-      - run:
-        name: "Install env"
-        command: npm install
-      - run:
-        name: "Run test"
-        command: npm run local
+      - npm install
+      - npm run local
