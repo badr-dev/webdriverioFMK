@@ -1,15 +1,13 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
-workflows:
-  node-tests:
-    jobs:
-      myjob:
-        steps:
-          - checkout
-          - run:
-            name: "Install env"
-            command: npm install
-          - run:
-            name: "Run test"
-            command: npm run local
+  jobs:
+    myjob:
+      steps:
+        - checkout
+        - run:
+          name: "Install env"
+          command: npm install
+        - run:
+          name: "Run test"
+          command: npm run local
