@@ -11,9 +11,12 @@ class GoogleHomePage {
 
     public startPage(): void {
         browser.url(this._url);
-        $('body iframe').waitForExist({ timeout: 5000 });
-        browser.switchToFrame($('body iframe'));
-        $(this._acceptCookies).click();
+        
+        if ( $('body iframe').waitForExist({ timeout: 5000 }) ) {
+
+            browser.switchToFrame($('body iframe'));
+            $(this._acceptCookies).click();
+        }
     }
 
     public populate(keyword: string): void {
