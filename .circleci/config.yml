@@ -1,13 +1,13 @@
 version: 2.1
-  jobs:
-    build:
-      docker:
-        - image: circleci/node:10-browsers
-      steps:
-        - checkout
-        - run:
-          name: "Install env"
-          command: npm install
-        - run:
-          name: "Run test"
-          command: npm run local
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+        name: "Install env"
+        command: npm install
+      - run:
+        name: "Run test"
+        command: npm run local
