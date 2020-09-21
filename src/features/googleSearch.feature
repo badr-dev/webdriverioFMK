@@ -1,7 +1,7 @@
 @Search
 Feature: Google Search
 
-    @Scenario
+    @smoke
     Scenario: Populate field
     Given I'm on google home page
     When I fill in the keyword "ingenico" in the search field
