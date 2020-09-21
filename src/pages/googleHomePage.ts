@@ -20,16 +20,16 @@ class GoogleHomePage {
         }
     }
 
-    public populate(keyword: string): void {
-        $(this._queryField).setValue(keyword);
+    public async populate(keyword: string): Promise<void>{
+        await $(this._queryField).setValue(keyword);
     }
 
-    public submit(): void {
-        browser.keys(GoogleHomePage.EnterKey);
+    public async submit(): Promise<void>{
+        await browser.keys(GoogleHomePage.EnterKey);
     }
 
-    public checkResult(keyword: string) {
-        browser.pause(7000);
+    public async checkResult(keyword: string): Promise<void>{
+        await browser.pause(7000);
         assert(browser.getUrl().includes(keyword));
     }
 }
