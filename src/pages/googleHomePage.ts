@@ -9,12 +9,13 @@ class GoogleHomePage {
     
     public static EnterKey: string = "\uE007";
 
-    public startPage(): void {
+
+    public async startPage(): Promise<void>{
         browser.url(this._url);
         
-        if ( $('body iframe').waitForExist({ timeout: 5000 }) ) {
+        if ( (await $('body iframe').waitForExist({ timeout: 5000 })) ) {
 
-            browser.switchToFrame($('body iframe'));
+            (await browser.switchToFrame($('body iframe')));
             $(this._acceptCookies).click();
         }
     }
