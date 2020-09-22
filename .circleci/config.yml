@@ -8,4 +8,6 @@ jobs:
       - run: set NODE_OPTIONS=--max_old_space_size=8192
       - run: npm install
       - run: npm run local
-      - run: npm run report
+      - run: 
+        command: npm run report
+        when: always
