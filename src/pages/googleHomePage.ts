@@ -20,8 +20,8 @@ class GoogleHomePage {
         }
     }
 
-    public  populate(keyword: string): void {
-         $(this._queryField).setValue(keyword);
+    public async populate(keyword: string): Promise<void>{
+        await $(this._queryField).setValue(keyword);
     }
 
     public async submit(): Promise<void>{
