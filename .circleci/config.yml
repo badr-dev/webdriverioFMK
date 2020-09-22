@@ -9,9 +9,9 @@ jobs:
       - run: npm install
       - run: npm run local
       - run:
-        name: report
-        command: npm run report
-        when: always
+          name: report
+          command: npm run report
+          when: always
       - store-artifacts:
-        path: /home/circleci/project/allure-results
-        when: always
+          path: /home/circleci/project/allure-results
+          when: always
