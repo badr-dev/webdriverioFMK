@@ -12,7 +12,7 @@ Feature: Google Search
         Given I'm on google home page
         When I fill in the keyword "<keyword>" in the search field
         And I click on submit button
-        Then the url contains the keyword "result"
+        Then the url contains the keyword "<result>"
 
         Examples:
             | keyword     | result      |
