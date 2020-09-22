@@ -1,14 +1,14 @@
 # webdriverioFMK
-Webdriverio framework test with cucumber
+Webdriverio framework test with cucumber, integrated in circleCI
 
 ## Requirements
-- NodeJS v
+- NodeJS v13
 - Git
 - Vscode 
 
 ## Setup project
 
-Run this command to install the projet 
+To install the project, run the following command 
 
 ```sh
 npm install
@@ -17,22 +17,22 @@ npm install
 #### Project structure :
 
 ```
-- .ide  //vscode settings folders (autocompletion gherkins)
+- .circleci // containg configuration file of the pipeline
 - wdio.conf.js // WebdriverIO configuration
-- node_modules // nodejs dependencies folder
+- node_modules // nodejs dependencies
 - src // source folder
 -- features // Feature files containing scenarii
--- pages // Pages objects folder
+-- pages // Pages objects folder containing the selectors
 -- steps // Steps definition folder
-- package-lock.json // nodejs versioned dependencies tree file
+- package-lock.json // nodejs versioned dependencies files
 - package.json // nodejs dependencies file
-- tsconfig.json
+- tsconfig.json // typescript configuration
 - README.md
 ```
 
 #### Execute tests locally
 
-Execute the following command to launch the automated tests locally
+To execute the automated tests, run this command (By default, it will be executed on chrome browser. You set up the browsers in the config file capabilities )
 ```sh
 npm wdio wdio.conf.js
 ```
