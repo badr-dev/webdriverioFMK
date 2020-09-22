@@ -9,5 +9,5 @@ jobs:
       - run: npm install
       - run: npm run local
       - run: npm run report
-      - Build_artifacts:
+      - store_artifacts:
         path: /home/circleci/project/allure-report/
