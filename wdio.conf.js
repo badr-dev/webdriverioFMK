@@ -5,7 +5,6 @@ exports.config = {
     ],
     maxInstances: 10,
     capabilities: [{
-        maxInstances: 5,
         browserName: 'chrome',
         acceptInsecureCerts: true
     },
@@ -23,7 +22,6 @@ exports.config = {
             () => { require('ts-node').register({ files: true }) }
         ],
         timeout: 10000,
-        backtrace: true,
         failFast: false,
         require: ["./src/steps/**/*.ts"],
     },

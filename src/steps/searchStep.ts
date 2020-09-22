@@ -13,6 +13,13 @@ When("I click on submit button", (): void => {
     GH.submit();
 });
 
-Then("Check if string {string} is in url", (keyword: string): void => {
+Then("the url contains the keyword {string}", (keyword: string): void => {
     GH.checkResult(keyword);
+});
+
+Then("I can filter my results by:", (filterTable): void => {
+    filterTable.rawTable.map((filter: any[]) => {
+        const expectedFilter = filter[0];
+        GH.checkFilterExist(expectedFilter);
+    })
 });
