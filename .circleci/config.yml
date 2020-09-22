@@ -12,3 +12,6 @@ jobs:
         name: report
         command: npm run report
         when: always
+      - store-artifacts:
+        path: /home/circleci/project/allure-results
+        when: always
